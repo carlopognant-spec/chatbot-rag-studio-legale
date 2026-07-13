@@ -23,7 +23,7 @@ CHUNK_SIZE = 500
 CHUNK_OVERLAP = 100
 TOP_K = 3
 
-CHROMA_HOST = os.environ.get("CHROMADB_HOST", "localhost")
+CHROMA_PERSIST_PATH = os.environ.get("CHROMA_PERSIST_PATH", "/app/chroma_data")
 CHROMA_PORT = int(os.environ.get("CHROMADB_PORT", "8000"))
 
 NO_INFO_MESSAGE = (
@@ -37,9 +37,13 @@ def _get_gemini_client() -> genai.Client:
     return genai.Client(api_key=api_key)
 
 
-def _get_chroma_client() -> chromadb.HttpClient:
-    # ChromaDB gira in container separato: in Compose l'host è il nome del servizio (es. "chromadb").
-    return chromadb.HttpClient(host=CHROMA_HOST, port=CHROMA_PORT)
+def _get_chroma_client() -> chromadb.HttpClient | chromadb.PersistentClient:
+    chroma_host = os.environ.get("CHROMADB_HOST")
+    if chroma_host:
+        # Modalità rete: ChromaDB in container separato (Docker Compose).
+        return chromadb.HttpClient(host=chroma_host, port=CHROMA_PORT)
+    # Modalità embedded: singolo container (es. Render), senza servizio ChromaDB esterno.
+    return chromadb.PersistentClient(path=CHROMA_PERSIST_PATH)
 
 
 def load_documents(documents_dir: Path = DOCUMENTS_DIR) -> list[dict[str, str]]:

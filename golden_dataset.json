@@ -1,0 +1,122 @@
+[
+  {
+    "id": "q01",
+    "query": "Entro quanti giorni posso recedere dal contratto dopo la sottoscrizione?",
+    "expected_source": "clausola_contrattuale.txt",
+    "expected_answer_contains": ["14 giorni", "recesso"]
+  },
+  {
+    "id": "q02",
+    "query": "Qual è il preavviso necessario per risolvere il contratto?",
+    "expected_source": "clausola_contrattuale.txt",
+    "expected_answer_contains": ["30 giorni", "preavviso"]
+  },
+  {
+    "id": "q03",
+    "query": "Entro quanto tempo devo pagare le parcelle emesse dallo studio?",
+    "expected_source": "clausola_contrattuale.txt",
+    "expected_answer_contains": ["30 giorni"]
+  },
+  {
+    "id": "q04",
+    "query": "Quale foro è competente per le controversie contrattuali?",
+    "expected_source": "clausola_contrattuale.txt",
+    "expected_answer_contains": ["Torino"]
+  },
+  {
+    "id": "q05",
+    "query": "Come viene limitata la responsabilità dello studio?",
+    "expected_source": "clausola_contrattuale.txt",
+    "expected_answer_contains": ["dodici mesi", "dolo"]
+  },
+  {
+    "id": "q06",
+    "query": "Chi è il titolare del trattamento dei dati personali?",
+    "expected_source": "informativa_privacy.txt",
+    "expected_answer_contains": ["Rossi & Partners", "Titolare"]
+  },
+  {
+    "id": "q07",
+    "query": "Per quanto tempo vengono conservati i dati relativi agli incarichi professionali?",
+    "expected_source": "informativa_privacy.txt",
+    "expected_answer_contains": ["10 anni"]
+  },
+  {
+    "id": "q08",
+    "query": "A quale indirizzo email posso esercitare i diritti GDPR?",
+    "expected_source": "informativa_privacy.txt",
+    "expected_answer_contains": ["privacy@rossipartners.it"]
+  },
+  {
+    "id": "q09",
+    "query": "I dati vengono trasferiti fuori dall'Unione Europea?",
+    "expected_source": "informativa_privacy.txt",
+    "expected_answer_contains": ["non sono trasferiti", "Paesi terzi"]
+  },
+  {
+    "id": "q10",
+    "query": "Quali cookie utilizza il sito web dello studio?",
+    "expected_source": "informativa_privacy.txt",
+    "expected_answer_contains": ["cookie tecnici"]
+  },
+  {
+    "id": "q11",
+    "query": "Quali sono gli orari di apertura dello studio dal lunedì al venerdì?",
+    "expected_source": "estratto_regolamento.txt",
+    "expected_answer_contains": ["9:00", "18:00"]
+  },
+  {
+    "id": "q12",
+    "query": "Con quanto anticipo devo cancellare un appuntamento per evitare la penale?",
+    "expected_source": "estratto_regolamento.txt",
+    "expected_answer_contains": ["24 ore", "50 euro"]
+  },
+  {
+    "id": "q13",
+    "query": "Dove si trova il parcheggio riservato ai clienti?",
+    "expected_source": "estratto_regolamento.txt",
+    "expected_answer_contains": ["Via Garibaldi", "cortile"]
+  },
+  {
+    "id": "q14",
+    "query": "Entro quanto tempo lo studio risponde ai reclami formali?",
+    "expected_source": "estratto_regolamento.txt",
+    "expected_answer_contains": ["15 giorni"]
+  },
+  {
+    "id": "q15",
+    "query": "È consentito fumare negli uffici dello studio?",
+    "expected_source": "estratto_regolamento.txt",
+    "expected_answer_contains": ["vietato", "fumare"]
+  },
+  {
+    "id": "q16",
+    "query": "Qual è il codice fiscale dello studio legale?",
+    "expected_source": null,
+    "expected_answer_contains": ["Non ho trovato"]
+  },
+  {
+    "id": "q17",
+    "query": "Quanto costa una consulenza per una causa di divorzio?",
+    "expected_source": null,
+    "expected_answer_contains": ["Non ho trovato"]
+  },
+  {
+    "id": "q18",
+    "query": "Chi è il sindaco di Torino?",
+    "expected_source": null,
+    "expected_answer_contains": ["Non ho trovato"]
+  },
+  {
+    "id": "q19",
+    "query": "Come possono essere modificate le clausole del contratto?",
+    "expected_source": "clausola_contrattuale.txt",
+    "expected_answer_contains": ["iscrietto", "sottoscritta"]
+  },
+  {
+    "id": "q20",
+    "query": "Qual è l'indirizzo PEC dello studio?",
+    "expected_source": "informativa_privacy.txt",
+    "expected_answer_contains": ["studio.rossi@pec.it"]
+  }
+]

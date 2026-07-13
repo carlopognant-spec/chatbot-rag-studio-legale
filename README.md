@@ -165,3 +165,5 @@ Verifica i nomi aggiornati nella [documentazione Gemini](https://ai.google.dev/g
 ## Licenza
 
 Progetto didattico — ITS Academy Piemonte, Gen AI Specialist.
+
+> Aggiornamento: gemini-2.0-flash è stato ritirato il 1° giugno 2026. Il progetto usa ora gemini-2.5-flash come default.

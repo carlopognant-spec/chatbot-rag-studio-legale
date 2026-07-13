@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """
 Pipeline RAG per lo Studio Legale Rossi & Partners.
 Caricamento documenti, embedding Gemini, storage/retrieval ChromaDB, generazione risposta.
